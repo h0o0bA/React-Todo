@@ -11,18 +11,13 @@ class App extends React.Component {
     this.state = {
       todos: [
         {
-          task: <h1>Todo List: MVP</h1>,
+          task: 'Learn React',
           id: 1,
           completed: false
         },
         {
-          task: 'Learn setState()',
-          id: 2,
-          completed: false
-        },
-        {
           task: 'Style my Todo List',
-          id: 3,
+          id: 2,
           completed: false
         }
       ],
