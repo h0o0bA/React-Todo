@@ -2,4 +2,33 @@ body {
     text-align: center;
     color: white;
     background: black;
+    font-family: 'Source Sans Pro',sans-serif;
+}
+
+#wrapper {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    min-height: 100vh;
+    z-index: 3;
+}
+header {
+    align-items: center;
+    max-width: 100%;
+    text-align: center;
+}
+
+
+#myVideo {
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    position: fixed;
+}
+
+#root {
+    display: flex;
 }
