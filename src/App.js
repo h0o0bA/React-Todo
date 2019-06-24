@@ -1,6 +1,6 @@
-import React from 'react';
-import TodoList from './components/TodoComponents/TodoList';
-import TodoForm from './components/TodoComponents/TodoForm';
+import React from "react";
+import TodoList from "./components/TodoComponents/TodoList";
+import TodoForm from "./components/TodoComponents/TodoForm";
 
 class App extends React.Component {
   // you will need a place to store your state in this component.
@@ -11,32 +11,27 @@ class App extends React.Component {
     this.state = {
       todos: [
         {
-          task: 'Learn React',
+          task: "Style my ToDo List",
           id: 1,
-          completed: false
-        },
-        {
-          task: 'Style my Todo List',
-          id: 2,
           completed: false
         }
       ],
-      todo: ''
+      todo: ""
     };
   }
 
   addTodo = e => {
     e.preventDefault();
     const newTodo = { task: this.state.todo, completed: false, id: Date.now() };
-    this.setState({ 
-      todos: [...this.state.todos, newTodo], 
-      todo: '' 
+    this.setState({
+      todos: [...this.state.todos, newTodo],
+      todo: ""
     });
   };
 
-   changeTodo = e => this.setState({ [e.target.name]: e.target.value });
+  changeTodo = e => this.setState({ [e.target.name]: e.target.value });
 
-   toggleTodoComplete = id => {
+  toggleTodoComplete = id => {
     let todos = this.state.todos.slice();
     todos = todos.map(todo => {
       if (todo.id === id) {
@@ -49,12 +44,11 @@ class App extends React.Component {
     this.setState({ todos });
   };
 
-   clearCompletedTodos = e => {
+  clearCompletedTodos = e => {
     e.preventDefault();
     let todos = this.state.todos.filter(todo => !todo.completed);
     this.setState({ todos });
   };
-
 
   render() {
     return (
